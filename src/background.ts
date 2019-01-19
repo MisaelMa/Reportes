@@ -52,7 +52,30 @@ app.on("activate", () => {
 const template = [
   {
     label: "Setting",
-    submenu: [{ label: "Connection" }]
+    submenu: [
+      {
+        label: "Connection",
+        click() {
+          const modalPath =
+            process.env.NODE_ENV === "development"
+              ? "http://localhost:8080/#/config"
+              : `file://${__dirname}/index.html#config`;
+          let winConfig = new BrowserWindow({
+            width: 900,
+            height: 600,
+            show: false
+          });
+          winConfig.loadURL(modalPath);
+          winConfig.webContents.on("did-finish-load", function() {
+            winConfig.show();
+          });
+
+          winConfig.on("closed", () => {
+            win = null;
+          });
+        }
+      }
+    ]
   }
 ];
 
