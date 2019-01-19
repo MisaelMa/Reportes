@@ -69,6 +69,7 @@ const template = [
           winConfig.webContents.on("did-finish-load", function() {
             winConfig.show();
           });
+          winConfig.webContents.openDevTools();
 
           winConfig.on("closed", () => {
             win = null;
