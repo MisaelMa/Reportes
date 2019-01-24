@@ -1,0 +1,9 @@
+{
+  "id": 1,
+  "type": "mysql",
+  "host": "VRM-APPSRV01//COMPAC2",
+  "port": 3306,
+  "username": "Sa",
+  "password": "Compac08",
+  "database": "test"
+}

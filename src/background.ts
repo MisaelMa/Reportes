@@ -5,6 +5,7 @@ import {
   createProtocol,
   installVueDevtools
 } from "vue-cli-plugin-electron-builder/lib";
+
 const isDevelopment = process.env.NODE_ENV !== "production";
 
 // Keep a global reference of the window object, if you don't, the window will
@@ -15,7 +16,7 @@ let win: BrowserWindow | null;
 protocol.registerStandardSchemes(["app"], { secure: true });
 function createWindow() {
   // Create the browser window.
-  win = new BrowserWindow({ width: 1000, height: 900, resizable: true });
+  win = new BrowserWindow({ width: 400, height: 900, resizable: true });
 
   if (process.env.WEBPACK_DEV_SERVER_URL) {
     // Load the url of the dev server if in development mode
@@ -48,7 +49,7 @@ app.on("activate", () => {
     createWindow();
   }
 });
-
+/*
 const template = [
   {
     label: "Setting",
@@ -81,7 +82,7 @@ const template = [
 ];
 
 const menu = Menu.buildFromTemplate(template);
-Menu.setApplicationMenu(menu);
+Menu.setApplicationMenu(menu);*/
 // This method will be called when Electron has finished
 // initialization and is ready to create browser windows.
 // Some APIs can only be used after this event occurs.

@@ -44,7 +44,7 @@ export default {
   }),
   methods: {
     open: function() {
-      console.log("a");
+      /*console.log("a");
       this.loading = true;
       const { app, BrowserWindow } = require("electron").remote;
       const currentWindow = require("electron").remote.getCurrentWindow();
@@ -68,7 +68,7 @@ export default {
         win = null;
         this.loading = false;
         currentWindow.show();
-      });
+      });*/
     }
   }
 };

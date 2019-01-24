@@ -1,0 +1,21 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Admin",
+      "password": "s"
+    }
+  ],
+  "connections": [
+    {
+      "id": 1,
+      "type": "mysql",
+      "host": "192.168.88.48",
+      "port": 3306,
+      "username": "amir",
+      "password": "",
+      "database": "test"
+    }
+  ],
+  "log": []
+}
